@@ -18,24 +18,79 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   // Part 1
 
+  const title = document.getElementById("main-title")
+
+  console.log(title);
+
+  title.innerText = ("Dom's Garage")
 
   // Part 2
 
+  const body = document.querySelector("body")
+
+  console.log(body);
+
+  body.style.backgroundColor = "turquoise" 
 
   // Part 3
 
+  const favoriteThings = document.getElementById("favorite-things")
 
+  favoriteThings.removeChild(favoriteThings.lastElementChild)
+  
+  console.log(favoriteThings.lastElementChild)
+  
   // Part 4
 
+  const specialTitle = document.getElementsByClassName("special-title")
+
+  console.dir(specialTitle)
+
+  for (i = 0; i <= 7; i++) {
+    specialTitle.style.font-size = "2rem"
+  }
 
   // Part 5
 
+  const pastRaces = document.getElementById("past-races")
+
+  pastRaces.removeChild(pastRaces.lastElementChild.previousElementSibling.previousElementSibling)
+  console.log(pastRaces);
 
   // Part 6
 
+  const newLi = document.createElement("li")
+  newLi.textContent = "Lagos"
+
+  console.log(newLi);
+
+  pastRaces.appendChild(newLi)
+  console.log(pastRaces);
 
   // Part 7
 
+  const newDiv = document.createElement("div")
+  newDiv.classList.add(".blog-post")
+
+  console.log(newDiv);
+
+  const newH1 = document.createElement("h1")
+  newH1.textContent = "Lagos"
+
+  console.log(newH1);
+
+  const newP = document.createElement("p")
+  newP.textContent = "I hydroplaned all the way Lagos Lagoon"
+
+  console.log(newP);
+
+  newH1.appendChild(newP)
+  newDiv.appendChild(newH1)
+
+  const mainDiv = document.getElementsByClassName("main")
+  console.log(mainDiv);
+
+  body.appendChild(newDiv)
 
   // Part 8
 
